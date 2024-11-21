@@ -70,10 +70,10 @@ namespace MainForm
         {
 
             // 게임관련
-            /* GameForm1 gameForm1 = new GameForm1();
-             gameForm1.ShowDialog();
+           /* GameForm1 gameForm1 = new GameForm1();
+            gameForm1.ShowDialog();
 
-             string gameScore = gameForm1.Score;*/
+            string gameScore = gameForm1.Score;*/
             // string gameName = gameForm1.GameName;
             /*UserScore user = new UserScore("userScore.txt");
             user.UpdateScore(UserId, gameName, gameScore);*/
