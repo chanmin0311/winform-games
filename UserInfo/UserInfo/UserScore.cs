@@ -11,6 +11,7 @@ namespace UserInfo
         // 각 항목은 콤마로 구분, 띄어쓰기 없음
         readonly private string FilePathScore;
 
+        
         public enum GameList
         {
             점프게임 = 1,
@@ -29,7 +30,7 @@ namespace UserInfo
             FilePathScore = filePathScore;
         }
   
-        public void UpdateScore(string id, GameList gameName, string score)
+        public void SetScore(string id, GameList gameName, string score)
         {
             
             int gameIndex = ((int)gameName);
@@ -87,15 +88,11 @@ namespace UserInfo
                 }
             }
         }
-        public string GetHighestScore (string id, GameList gameName)
+        public string[] GetHighestScore (string id)
         {
-            int gameIndex = (int)gameName;
-            string highestScore = null;
-            // id를 제외하고 각 게임당 최대, 최근 점수, 두 항목의 값을 가지므로
-            // 1부터 시작하는 gameIndex에 2를 곱하면 해당 게임의 최근 점수에 접근 가능
-            // 최대 점수는 최근 점수의 바로 전 인덱스에 위치하므로 
-            int highestScoreIndex = (gameIndex * 2) - 1;
-
+            // 9개의 게임에 대한 점수를 저장할 배열 선언
+            string[] highestScore = new string[9];
+            
             // 파일이 존재하는 경우에만 
             if (File.Exists(FilePathScore))
             {
@@ -111,34 +108,51 @@ namespace UserInfo
                     {
                         // 콤마로 구분되어있는 데이터를 콤마의 앞뒤로 분할하여 string형으로 차례대로 배열에 저장
                         string[] scoreInfo = line.Split(',');
-                        // 조회하고자 하는 게임의 최고 점수가 저장되어있는 인덱스로 접근하여 값 반환
-                        highestScore = scoreInfo[highestScoreIndex];
+                        
+                        for (int i = 1; i < scoreInfo.Length; i++)
+                        {
+                            if (i % 2 == 1)
+                            {
+                                int newIndex = i / 2;
+                                // 가장 높은 점수는 1번 인덱스부터 시작하여 홀수번 인덱스에 저장되므로
+                                // 가장 높은 점수가 저장된 부분만 다시 복사하여 그 배열을 리턴
+                                highestScore[newIndex] = scoreInfo[i];
+                            }
+                        }
                         return highestScore;
                     }
                 }
             }
             return highestScore;
         }
-        public string GetLatestScore (string id, GameList gameName)
+        public string[] GetLatestScore (string id)
         {
-            int gameIndex = (int)gameName;
-            string latestScore = null;
-            // id를 제외하고 각 게임당 최대, 최근 점수, 두 항목의 값을 가지므로
-            // 1부터 시작하는 gameIndex에 2를 곱하면 해당 게임의 최근 점수에 접근 가능
-            int latestScoreIndex = (gameIndex * 2);
-
+            // 최근 플레이 점수를 저장할 배열 선언
+            string[] latestScore = new string[9];
+           
             // 지정된 경로에 파일에 존재하는 경우에만
             if (File.Exists(FilePathScore))                             
             {
                 // GetHighestScore 메소드와 같은 논리임
-                // 단지 값에 접근할 인덱스만 다를 뿐
+                // 값에 접근할 인덱스만 다름
                 string[] lines = File.ReadAllLines(FilePathScore);
                 foreach (string line in lines)
                 {
                     if (line.Contains(id))
                     {
+                        // 해당 유저의 점수 정보를 저장
                         string[] scoreInfo = line.Split(',');
-                        latestScore = scoreInfo[latestScoreIndex];
+
+                        for (int i = 2; i < scoreInfo.Length; i++)
+                        {
+                            if (i % 2 == 0)
+                            {
+                                int newIndex = (i / 2) - 1;
+                                // 최근 플레이 점수는 짝수번 인덱스에 저장
+                                // 최근 플레이 점수만 새로운 배열에 저장 후 리넡
+                                latestScore[newIndex] = scoreInfo[i];  
+                            }
+                        }
                         return latestScore;
                     }
                 }

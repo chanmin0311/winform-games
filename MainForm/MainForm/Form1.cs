@@ -16,40 +16,31 @@ namespace MainForm
         }
         public string UserId { get; set; } = "";
 
-        public enum enumA
-        {
-            a = 1,
-            b,
-            c,
-            d
-        };
-        
         public Form1()
         {
             InitializeComponent();
         }
-
-        private void enumNum(enumA a)
+        private void abx(ushort a)
         {
-            int number = (int)a;
-            int sum = number + 2;
-            MessageBox.Show(sum.ToString());
+            
+            MessageBox.Show(a.ToString());
         }
+
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
             {
-                UserScore userScore = new UserScore("userScore.txt");
+                UserScore user= new UserScore("userScore.txt");
                 var scores = new[] 
                 {
                     game1Score, game2Score,  game3Score,
                     game4Score, game5Score, game6Score, 
                     game7Score, game8Score, game9Score
                 };
-               
-                for (int i = 0 ; i < scores.Length; i++)
+               string[] userScore = user.GetHighestScore(UserId);
+               for (int i = 0; i < scores.Length; i++)
                 {
-                    scores[i].Text = userScore.GetHighestScore(UserId, i + 1);
+                    scores[i].Text = userScore[i];
                 }
             }
         }
@@ -58,7 +49,7 @@ namespace MainForm
         {
             if ( radioButton2.Checked)
             {
-                UserScore userScore = new UserScore("userScore.txt");
+                UserScore user = new UserScore("userScore.txt");
                 var scores = new[]
                     {
                     game1Score, game2Score,  game3Score,
@@ -66,9 +57,10 @@ namespace MainForm
                     game7Score, game8Score, game9Score
                 };
 
+                string[] userScore = user.GetLatestScore(UserId);
                 for (int i = 0; i < scores.Length; i++)
                 {
-                    scores[i].Text = userScore.GetLatestScore(UserId, i + 1);
+                    scores[i].Text = userScore[i];
                 }
             }
         }
@@ -83,11 +75,12 @@ namespace MainForm
 
         private void play1Button_Click(object sender, EventArgs e)
         {
-
+            //UserScore user = new UserScore("userScore.txt");
+           // user.SetScore(UserId, UserScore.GameList.점프게임, gameScore);
             // 게임관련
            /* GameForm1 gameForm1 = new GameForm1();
             gameForm1.ShowDialog();
-
+          
             string gameScore = gameForm1.Score;*/
             // string gameName = gameForm1.GameName;
             /*UserScore user = new UserScore("userScore.txt");
@@ -96,17 +89,17 @@ namespace MainForm
 
         private void play2Button_Click(object sender, EventArgs e)
         {
-            enumNum(enumA.b);
+            
         }
 
         private void play3Button_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void play4Button_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void play5Button_Click(object sender, EventArgs e)
