@@ -1,6 +1,7 @@
 ﻿using System;
 using UserInfo;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MainForm
 {
@@ -29,10 +30,26 @@ namespace MainForm
             
         }
 
+        private void DrawRedBox()
+        {
+            Graphics g = CreateGraphics();
+
+            int x = emailTxtBox.Location.X;
+            int y = emailTxtBox.Location.Y;
+            int width = emailTxtBox.Width;
+            int height = emailTxtBox.Height;
+            Point[] pts = {
+                new Point(144, 5), new Point(144 + width + 1, 5),
+                new Point(144 + width + 1 ,5 + height + 1), new Point(144, 5 + height + 1)
+            };
+            g.DrawLines(new Pen(Color.DarkRed), pts);
+            g.Dispose();
+        }
         private  void emailTxtBox_MouseUp(object sender, MouseEventArgs e)
         {
             if (emailTxtBox.Text.Equals("입력해 주세요."))
             {
+                DrawRedBox();
                 pwcheckTxtBox.ForeColor = System.Drawing.Color.DarkRed;
                 emailTxtBox.Text = "";
             }

@@ -40,13 +40,13 @@
             this.play3Button = new System.Windows.Forms.Button();
             this.play2Button = new System.Windows.Forms.Button();
             this.play1Button = new System.Windows.Forms.Button();
-            this.play4Button = new System.Windows.Forms.Button();
-            this.play5Button = new System.Windows.Forms.Button();
-            this.play6Button = new System.Windows.Forms.Button();
             this.play7Button = new System.Windows.Forms.Button();
             this.play8Button = new System.Windows.Forms.Button();
             this.play9Button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.play4Button = new System.Windows.Forms.Button();
+            this.play5Button = new System.Windows.Forms.Button();
+            this.play6Button = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.userIdLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -203,6 +203,7 @@
             this.play3Button.Size = new System.Drawing.Size(154, 153);
             this.play3Button.TabIndex = 4;
             this.play3Button.UseVisualStyleBackColor = true;
+            this.play3Button.Click += new System.EventHandler(this.play3Button_Click);
             // 
             // play2Button
             // 
@@ -212,6 +213,7 @@
             this.play2Button.Size = new System.Drawing.Size(154, 153);
             this.play2Button.TabIndex = 3;
             this.play2Button.UseVisualStyleBackColor = true;
+            this.play2Button.Click += new System.EventHandler(this.play2Button_Click);
             // 
             // play1Button
             // 
@@ -223,33 +225,6 @@
             this.play1Button.UseVisualStyleBackColor = true;
             this.play1Button.Click += new System.EventHandler(this.play1Button_Click);
             // 
-            // play4Button
-            // 
-            this.play4Button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.play4Button.Location = new System.Drawing.Point(22, 202);
-            this.play4Button.Name = "play4Button";
-            this.play4Button.Size = new System.Drawing.Size(154, 153);
-            this.play4Button.TabIndex = 5;
-            this.play4Button.UseVisualStyleBackColor = true;
-            // 
-            // play5Button
-            // 
-            this.play5Button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.play5Button.Location = new System.Drawing.Point(221, 202);
-            this.play5Button.Name = "play5Button";
-            this.play5Button.Size = new System.Drawing.Size(154, 153);
-            this.play5Button.TabIndex = 6;
-            this.play5Button.UseVisualStyleBackColor = true;
-            // 
-            // play6Button
-            // 
-            this.play6Button.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.play6Button.Location = new System.Drawing.Point(422, 202);
-            this.play6Button.Name = "play6Button";
-            this.play6Button.Size = new System.Drawing.Size(154, 153);
-            this.play6Button.TabIndex = 7;
-            this.play6Button.UseVisualStyleBackColor = true;
-            // 
             // play7Button
             // 
             this.play7Button.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -258,6 +233,7 @@
             this.play7Button.Size = new System.Drawing.Size(154, 153);
             this.play7Button.TabIndex = 8;
             this.play7Button.UseVisualStyleBackColor = true;
+            this.play7Button.Click += new System.EventHandler(this.play7Button_Click);
             // 
             // play8Button
             // 
@@ -267,6 +243,7 @@
             this.play8Button.Size = new System.Drawing.Size(154, 153);
             this.play8Button.TabIndex = 9;
             this.play8Button.UseVisualStyleBackColor = true;
+            this.play8Button.Click += new System.EventHandler(this.play8Button_Click);
             // 
             // play9Button
             // 
@@ -276,6 +253,7 @@
             this.play9Button.Size = new System.Drawing.Size(154, 153);
             this.play9Button.TabIndex = 10;
             this.play9Button.UseVisualStyleBackColor = true;
+            this.play9Button.Click += new System.EventHandler(this.play9Button_Click);
             // 
             // label1
             // 
@@ -286,6 +264,36 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 19);
             this.label1.TabIndex = 11;
+            // 
+            // play4Button
+            // 
+            this.play4Button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.play4Button.Location = new System.Drawing.Point(22, 202);
+            this.play4Button.Name = "play4Button";
+            this.play4Button.Size = new System.Drawing.Size(154, 153);
+            this.play4Button.TabIndex = 5;
+            this.play4Button.UseVisualStyleBackColor = true;
+            this.play4Button.Click += new System.EventHandler(this.play4Button_Click);
+            // 
+            // play5Button
+            // 
+            this.play5Button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.play5Button.Location = new System.Drawing.Point(221, 202);
+            this.play5Button.Name = "play5Button";
+            this.play5Button.Size = new System.Drawing.Size(154, 153);
+            this.play5Button.TabIndex = 6;
+            this.play5Button.UseVisualStyleBackColor = true;
+            this.play5Button.Click += new System.EventHandler(this.play5Button_Click);
+            // 
+            // play6Button
+            // 
+            this.play6Button.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.play6Button.Location = new System.Drawing.Point(422, 202);
+            this.play6Button.Name = "play6Button";
+            this.play6Button.Size = new System.Drawing.Size(154, 153);
+            this.play6Button.TabIndex = 7;
+            this.play6Button.UseVisualStyleBackColor = true;
+            this.play6Button.Click += new System.EventHandler(this.play6Button_Click);
             // 
             // tableLayoutPanel2
             // 

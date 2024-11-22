@@ -11,13 +11,28 @@ namespace UserInfo
         // 각 항목은 콤마로 구분, 띄어쓰기 없음
         readonly private string FilePathScore;
 
+        public enum GameList
+        {
+            점프게임 = 1,
+            숫자퍼즐게임,
+            숫자야구게임,
+            기억력게임,
+            뱀게임,
+            지뢰찾기,
+            자동차게임,
+            미정,                     // 확정 후 변경할 예정
+            테트리스
+        };
+
         public UserScore(string filePathScore)
         {
             FilePathScore = filePathScore;
         }
   
-        public void UpdateScore(string id, int gameIndex, string score)
+        public void UpdateScore(string id, GameList gameName, string score)
         {
+            
+            int gameIndex = ((int)gameName);
             if (File.Exists(FilePathScore))
             {
                 // 텍스트파일에 모든 텍스트를 읽고 lines문자열 배열에 저장
@@ -72,8 +87,9 @@ namespace UserInfo
                 }
             }
         }
-        public string GetHighestScore (string id, int gameIndex)
+        public string GetHighestScore (string id, GameList gameName)
         {
+            int gameIndex = (int)gameName;
             string highestScore = null;
             // id를 제외하고 각 게임당 최대, 최근 점수, 두 항목의 값을 가지므로
             // 1부터 시작하는 gameIndex에 2를 곱하면 해당 게임의 최근 점수에 접근 가능
@@ -103,8 +119,9 @@ namespace UserInfo
             }
             return highestScore;
         }
-        public string GetLatestScore (string id, int gameIndex)
+        public string GetLatestScore (string id, GameList gameName)
         {
+            int gameIndex = (int)gameName;
             string latestScore = null;
             // id를 제외하고 각 게임당 최대, 최근 점수, 두 항목의 값을 가지므로
             // 1부터 시작하는 gameIndex에 2를 곱하면 해당 게임의 최근 점수에 접근 가능

@@ -15,10 +15,25 @@ namespace MainForm
             set { m_blLoginCheck = value; }
         }
         public string UserId { get; set; } = "";
+
+        public enum enumA
+        {
+            a = 1,
+            b,
+            c,
+            d
+        };
         
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void enumNum(enumA a)
+        {
+            int number = (int)a;
+            int sum = number + 2;
+            MessageBox.Show(sum.ToString());
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -77,6 +92,46 @@ namespace MainForm
             // string gameName = gameForm1.GameName;
             /*UserScore user = new UserScore("userScore.txt");
             user.UpdateScore(UserId, gameName, gameScore);*/
+        }
+
+        private void play2Button_Click(object sender, EventArgs e)
+        {
+            enumNum(enumA.b);
+        }
+
+        private void play3Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play4Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play5Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play6Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play7Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play8Button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void play9Button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
