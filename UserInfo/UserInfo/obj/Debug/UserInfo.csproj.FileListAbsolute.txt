@@ -1,0 +1,6 @@
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\bin\Debug\UserInfo.dll
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\bin\Debug\UserInfo.pdb
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\obj\Debug\UserInfo.csproj.AssemblyReference.cache
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\obj\Debug\UserInfo.csproj.CoreCompileInputs.cache
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\obj\Debug\UserInfo.dll
+C:\Users\all\Desktop\winfrom-games\UserInfo\UserInfo\obj\Debug\UserInfo.pdb
