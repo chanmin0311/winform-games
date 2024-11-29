@@ -92,6 +92,7 @@ namespace MainForm
         {
             UserLogin user = new UserLogin("userInfo.txt");
            
+            // 라디오 버튼이 체크된 경우에만 
             if (radioButton1.Checked == true)
             {
                 string id = user.SearchUserId(emailTxtBox.Text, nameTxtBox.Text);
