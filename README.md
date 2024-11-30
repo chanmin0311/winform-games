@@ -33,6 +33,7 @@
    bash
    
    git add .
+   // 특정 파일만 선택하고 싶다면 git add 파일명
    git commit -m "작업 내용 요약"
 
 3. **원경 저장소에 Push**
