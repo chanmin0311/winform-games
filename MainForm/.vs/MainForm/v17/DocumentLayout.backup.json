@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\winform-games\\MainForm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B72CF692-8E87-4229-A7A1-3DEFC597156A}|..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\GAME14.csproj|c:\\users\\\uC774\uC0C1\uD6C8\\desktop\\\uC0C8 \uD3F4\uB354 (3)\\game14\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B72CF692-8E87-4229-A7A1-3DEFC597156A}|..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\GAME14.csproj|c:\\users\\\uC774\uC0C1\uD6C8\\desktop\\\uC0C8 \uD3F4\uB354 (3)\\game14\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|c:\\winform-games\\mainform\\mainform\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|C:\\winform-games\\MainForm\\mainform\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D712F8D0-4B09-432E-B55F-9F992896C9D6}|MainForm\\MainForm.csproj|solutionrelative:mainform\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "RelativeToolTip": "..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAlwB4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:13:55.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs",
+              "ToolTip": "C:\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\Users\\\uC774\uC0C1\uD6C8\\Desktop\\\uC0C8 \uD3F4\uB354 (3)\\GAME14\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:13:53.917Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form3.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form3.cs",
+              "ToolTip": "C:\\winform-games\\MainForm\\MainForm\\Form3.cs",
+              "RelativeToolTip": "MainForm\\Form3.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAqwEwAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T05:11:31.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form3.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form3.cs",
+              "ToolTip": "C:\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form3.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form3.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T05:11:31.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form1.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form1.cs",
+              "ToolTip": "C:\\winform-games\\MainForm\\MainForm\\Form1.cs",
+              "RelativeToolTip": "MainForm\\Form1.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAYwKsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T05:11:31.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form2.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form2.cs",
+              "ToolTip": "C:\\winform-games\\MainForm\\MainForm\\Form2.cs",
+              "RelativeToolTip": "MainForm\\Form2.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAQwFQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T05:11:31.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form1.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T05:11:31.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form2.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form2.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form2.cs",
+              "ToolTip": "C:\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form2.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "..\\..\\Users\\all\\Desktop\\winfrom-games\\MainForm\\MainForm\\Form2.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-12-03T05:11:31.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "C:\\winform-games\\MainForm\\MainForm\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm\\Form2.Designer.cs",
+              "ToolTip": "C:\\winform-games\\MainForm\\MainForm\\Form2.Designer.cs",
+              "RelativeToolTip": "MainForm\\Form2.Designer.cs",
+              "ViewState": "AQIAAM8AAAAAAAAAAAAmwNoAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001384|",
+              "WhenOpened": "2024-12-03T05:11:31.923Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

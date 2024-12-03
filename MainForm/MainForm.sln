@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainForm", "MainForm\MainForm.csproj", "{D712F8D0-4B09-432E-B55F-9F992896C9D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAME14", "..\..\Users\이상훈\Desktop\새 폴더 (3)\GAME14\GAME14.csproj", "{B72CF692-8E87-4229-A7A1-3DEFC597156A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D712F8D0-4B09-432E-B55F-9F992896C9D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D712F8D0-4B09-432E-B55F-9F992896C9D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D712F8D0-4B09-432E-B55F-9F992896C9D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72CF692-8E87-4229-A7A1-3DEFC597156A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72CF692-8E87-4229-A7A1-3DEFC597156A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72CF692-8E87-4229-A7A1-3DEFC597156A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72CF692-8E87-4229-A7A1-3DEFC597156A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
