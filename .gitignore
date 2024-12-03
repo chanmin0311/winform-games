@@ -1,0 +1,14 @@
+# 사용자별 파일
+*.suo
+*.user
+*.userosscache
+
+# 빌드 결과물
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Visual Studio 관련
+.vs/
