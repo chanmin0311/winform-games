@@ -1,14 +1,24 @@
-# 사용자별 파일
+# Visual Studio files
+.vs/
+.vs2019/
+.vs2022/
+
+# User-specific files
 *.suo
 *.user
 *.userosscache
+*.sln.docstates
 
-# 빌드 결과물
+# Build directories
 bin/
 obj/
-*.exe
-*.dll
+
+# Debug/Release directories
+**/bin/
+**/obj/
+
+# PDB files
 *.pdb
 
-# Visual Studio 관련
-.vs/
+# DLL files (optional, if you don't want to track them)
+*.dll
