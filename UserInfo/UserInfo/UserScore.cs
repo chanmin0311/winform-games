@@ -14,11 +14,11 @@ namespace UserInfo
         // 게임 리스트 열거형
         public enum GameList
         {
+            RANDOM_GAME,               // 랜덤게임 
             JUMP_GAME = 1,                  // 점프게임
             NUMBER_PUZZLE,              // 숫자 퍼즐 게임
             NUMBER_BASEBALL,        // 숫자 야구 게임 
             MEMORY_GAME,                // 기억력 게임
-            RANDOM_GAME,               // 랜덤게임 
             SNAKE_GAME,                  // 뱀게임 
             MINESWEEPER,               // 지뢰찾기 
             CAR_RACE,                       // 자동차 게임

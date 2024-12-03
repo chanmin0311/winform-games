@@ -103,8 +103,13 @@ namespace MainForm
                     // Form gameForm = null;
                     // 열거형 값 출력 (디버깅용)
                     MessageBox.Show($"You Clicked: {game}");
-                    user.SetScore(UserId, game, "0");
-                    UpdateScores();
+                    if (game != UserScore.GameList.RANDOM_GAME)
+                    {
+                        // 아직 랜덤 게임 선택은 구현 중
+                        user.SetScore(UserId, game, "0");
+                        UpdateScores();
+                    }
+                    
                    
                     // 게임 플레이 및 점수 업데이트 총 구현부
 
