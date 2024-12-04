@@ -23,18 +23,17 @@ namespace MainForm
         private void Form1_Load(object sender, EventArgs e)
         {
             // 버튼의 Tag에 게임 열거형으로 저장
-            play1Button.Tag = UserScore.GameList.JUMP_GAME;
-            play2Button.Tag = UserScore.GameList.NUMBER_PUZZLE;
+            play1Button.Tag = UserScore.GameList.RANDOM_GAME;
+            play2Button.Tag = UserScore.GameList.JUMP_GAME;
             play3Button.Tag = UserScore.GameList.NUMBER_BASEBALL;
             play4Button.Tag = UserScore.GameList.MEMORY_GAME;
-            play5Button.Tag = UserScore.GameList.RANDOM_GAME;
-            play6Button.Tag = UserScore.GameList.SNAKE_GAME;
-            play7Button.Tag = UserScore.GameList.MINESWEEPER;
-            play8Button.Tag = UserScore.GameList.CAR_RACE;
-            play9Button.Tag = UserScore.GameList.TETRIS;
+            play5Button.Tag = UserScore.GameList.SNAKE_GAME;
+            play6Button.Tag = UserScore.GameList.MINESWEEPER;
+            play7Button.Tag = UserScore.GameList.CAR_RACE;
+            play8Button.Tag = UserScore.GameList.TETRIS;
 
             // 모든 버튼의 클릭 이벤트 공통 핸들러로 연결
-            var buttons = new[] { play1Button, play2Button, play3Button, play4Button, play5Button, play6Button, play7Button, play8Button, play9Button };
+            var buttons = new[] { play1Button, play2Button, play3Button, play4Button, play5Button, play6Button, play7Button, play8Button };
             foreach (var button in buttons)
             {
                 button.Click += GamePlayButton_Click;
@@ -52,7 +51,7 @@ namespace MainForm
             var scores = new[]
                {
                     game1Score, game2Score, game3Score, game4Score,
-                    game5Score, game6Score, game7Score, game8Score
+                    game5Score, game6Score, game7Score
                 };
 
             if (radioButton1.Checked)
@@ -83,97 +82,100 @@ namespace MainForm
             UpdateScores();
         }
 
-       /* private void PlayRandomGame()
-        {
-            Random rnd = new Random();
-            var games = Enum.GetValues(typeof(UserScore.GameList));
-            UserScore.GameList randomGame = (UserScore.GameList)games.GetValue(rnd.Next(games.Length));
 
-            Form gameForm = new (randomGame);
-        }*/
         private void GamePlayButton_Click(object sender, EventArgs e)
         {
-            UserScore user = new UserScore("userScore.txt");
+            UserScore userScore = new UserScore("userScore.txt");
 
             if (sender is Button button)
             {
                 if (button.Tag is UserScore.GameList game)
                 {
-                    // 게임 폼
-                    // Form gameForm = null;
-                    // 열거형 값 출력 (디버깅용)
-
-                    MessageBox.Show($"You Clicked: {game}");
-                    if (game != UserScore.GameList.RANDOM_GAME)
+                    if (game == UserScore.GameList.RANDOM_GAME)
                     {
-                        user.SetScore(UserId, game, "0");
-                        UpdateScores();
+                        // 랜덤 게임 로직
+                        var gameList = Enum.GetValues(typeof(UserScore.GameList)) // UserScore.GameList타입을 받아 이 열거형의 모든값을 배열로 반환
+                            .Cast<UserScore.GameList>()    // 반환값이 Array타입이고 배열의 모든 값을 UserScore.GameLis타입으로 형변환
+                            .Where(g => g != UserScore.GameList.RANDOM_GAME)    // 값이 랜덤게임이 아닌 값만 필터링
+                            .ToArray();     // 필터링 된 값들을 배열로 반환
+
+                        Random random = new Random();
+                        // 랜덤 게임을 제외한 나머지 게임 상수 값을 랜덤으로 선택하기 위해서 위에서 반환된 배열의 요소를 랜덤으로 선택
+                        UserScore.GameList selectedGame = gameList[random.Next(gameList.Length)];
+
+                        DialogResult result = MessageBox.Show($"랜덤으로 게임이 선택됩니다. 플레이하시겠습니까?",
+                                                              "랜덤 게임",
+                                                              MessageBoxButtons.YesNo,
+                                                              MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            LaunchGame(selectedGame);
+                        }
                     }
-                    
-                   
-                    // 게임 플레이 및 점수 업데이트 총 구현부
-
-                    /*switch (game)
+                    else
                     {
-                        case UserScore.GameList.JUMP_GAME:
-                            gameForm = new GameForm1();
-                            break;
-                        case UserScore.GameList.NUMBER_PUZZLE:
-                            gameForm = new GameForm2();
-                            break;
-                        case UserScore.GameList.NUMBER_BASEBALL:
-                            gameForm = new GameForm3();
-                            break;
-                        case UserScore.GameList.MEMORY_GAME:
-                            gameForm = new GameForm4();
-                            break;
-                        case UserScore.GameList.RANDOM_GAME:
-                            PlayRandomGame();
-                            break;
-                        case UserScore.GameList.SNAKE_GAME:
-                            gameForm = new GameForm6();
-                            break;
-                        case UserScore.GameList.MINESWEEPER:
-                            gameForm = new GameForm7();
-                            break;
-                        case UserScore.GameList.CAR_RACE:
-                            gameForm = new GameForm8();
-                            break;
-                        case UserScore.GameList.TETRIS:
-                            gameForm = new GameForm9();
-                            break;
-                    }*/
-
-                    /*if (gameForm != null && gameForm.ShowDialog() == DialogResult.OK)
-                    {
-                        string gameScore = string.Empty;
-
-                        if (gameForm is GameForm1 form1) gameScore = form1.Score;
-                        else if (gameForm is GameForm2 form2) gameScore = form2.Score;
-                        else if (gameForm is GameForm3 form3) gameScore = form3.Score;
-                        else if (gameForm is GameForm4 form4) gameScore = form4.Score;
-                        else if (gameForm is GameForm5 form5) gameScore = form5.Score;
-                        else if (gameForm is GameForm6 form6) gameScore = form6.Score;
-                        else if (gameForm is GameForm7 form7) gameScore = form7.Score;
-                        else if (gameForm is GameForm8 form8) gameScore = form8.Score;
-                        else if (gameForm is GameForm9 form9) gameScore = form9.Score;
-                        // ... 동일하게 처리
-
-                        // 점수 업데이트
-                        //user.SetScore(UserId, game, gameScore);
-
-                        // 점수 반영
-                        UpdateScores();
-                    }*/
+                        // 기존 버튼 처리
+                        DialogResult result = MessageBox.Show("플레이 하시겠습니까?", "게임 선택", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            LaunchGame(game);
+                        }
+                    }
                 }
             }
         }
 
+        private void LaunchGame(UserScore.GameList game)
+        {
+            UserScore userScore = new UserScore("userScore.txt");
+
+            switch (game)
+            {
+                case UserScore.GameList.JUMP_GAME:
+                    JumpGame jumpGame = new JumpGame();
+                    jumpGame.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.JUMP_GAME, jumpGame.Score);
+                    break;
+                case UserScore.GameList.NUMBER_BASEBALL:
+                    NumberBaseballGame numberBaseballGame = new NumberBaseballGame();
+                    numberBaseballGame.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.NUMBER_BASEBALL, numberBaseballGame.Score);
+                    break;
+                case UserScore.GameList.SNAKE_GAME:
+                    SnakeGame snakeGame = new SnakeGame();
+                    snakeGame.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.SNAKE_GAME, snakeGame.Score);
+                    break;
+                case UserScore.GameList.MEMORY_GAME:
+                    MemoryGame memoryGame = new MemoryGame();
+                    memoryGame.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.MEMORY_GAME, memoryGame.Score);
+                    break;
+                case UserScore.GameList.MINESWEEPER:
+                    MineSweeper mineSweeper = new MineSweeper();
+                    mineSweeper.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.MINESWEEPER, mineSweeper.Score);
+                    break;
+                case UserScore.GameList.CAR_RACE:
+                   CarGame carGame = new CarGame();
+                   carGame.ShowDialog();
+                   userScore.SetScore(UserId, UserScore.GameList.CAR_RACE, carGame.Score);
+                    break;
+                case UserScore.GameList.TETRIS:
+                    Tetris tetris = new Tetris();
+                    tetris.ShowDialog();
+                    userScore.SetScore(UserId, UserScore.GameList.TETRIS, tetris.Score);
+                    break;
+            }
+
+            // 점수 업데이트
+            UpdateScores();
+        }
         private void scoreInitBtn_Click(object sender, EventArgs e)
         {
             UserScore user = new UserScore("userScore.txt");
             user.InitializeUserScore(UserId);
             UpdateScores();
-        }
+        }    
     }
 }
