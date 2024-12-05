@@ -77,15 +77,14 @@ namespace MainForm
         private void button1_Click(object sender, EventArgs e)
         {
             UserRegistration user = new UserRegistration("userInfo.txt", "userScore.txt");
-            if (user.RegisterUser
-                (
+            if (user.RegisterUser (
                     emailTxtBox,
                     phoneTxtBox,
                     nameTxtBox,
                     idTxtBox,
                     pwTxtBox,
-                    pwcheckTxtBox
-                ))
+                    pwcheckTxtBox)
+                )
             {
                 this.Close();
             }
